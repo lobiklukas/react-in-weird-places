@@ -3,9 +3,9 @@
 </script>
 
 <div class="relative h-screen w-screen overflow-hidden" class:layout>
-	<div class="relative h-full p-8">
+	<!-- <div class="relative h-full p-8"> -->
 		<slot />
-	</div>
+	<!-- </div> -->
 </div>
 
 <style>

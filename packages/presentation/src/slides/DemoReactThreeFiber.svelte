@@ -52,17 +52,17 @@ export default function App() {
 <!-- Live Demo Slide with Embedded iframe -->
 <Slide animate>
 	<Layout>
-		<div class="flex h-full flex-col items-center justify-center gap-8 px-16">
+		<div class="flex h-full w-full flex-col items-center justify-center gap-8">
 			<div class="text-center">
 				<h2 class="text-[64px] font-bold">🎬 Live Demo</h2>
 				<p class="mt-4 text-[36px] text-teal-400">Interactive 3D Scene</p>
 			</div>
-			
+
 			<Step>
-				<div class="demo-container rounded-lg bg-gray-900 border-2 border-teal-500 p-4 w-full max-w-5xl">
-					<div class="bg-black rounded h-[500px] relative">
-						<iframe 
-							src="http://localhost:6003" 
+				<div class="demo-container rounded-lg bg-gray-900 border-2 border-teal-500 p-4 w-full">
+					<div class="bg-black rounded h-[700px] w-[80vw] relative">
+						<iframe
+							src="http://localhost:6003"
 							class="w-full h-full border-none rounded-lg"
 							title="React Three Fiber Demo"
 						></iframe>
@@ -70,13 +70,6 @@ export default function App() {
 							<p class="text-teal-400">🖱️ Drag to orbit • Scroll to zoom • Click objects</p>
 						</div>
 					</div>
-				</div>
-			</Step>
-
-			<Step>
-				<div class="flex gap-8 text-[24px] text-gray-400">
-					<p>🌐 Open: <span class="text-teal-400">localhost:6003</span></p>
-					<p>💻 Run: <code class="text-teal-400">pnpm dev:three</code></p>
 				</div>
 			</Step>
 		</div>
