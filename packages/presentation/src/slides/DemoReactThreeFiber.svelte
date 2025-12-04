@@ -98,7 +98,7 @@ export default function App() {
 
 			<Step>
 				<DemoFrame
-					src="http://localhost:6003"
+					src="http://localhost:54300"
 					title="React Three Fiber Demo"
 					controls="🖱️ Drag to orbit • Scroll to zoom • Click objects"
 				/>

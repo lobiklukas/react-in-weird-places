@@ -12,14 +12,14 @@ Interactive presentation built with Svelte and Reveal.js covering:
 
 **Location**: `packages/presentation/`  
 **Run**: `pnpm dev:presentation`  
-**URL**: http://localhost:5173
+**URL**: http://localhost:54100
 
 ### Demo: React PDF
 Generate PDF documents using React components with `@react-pdf/renderer`.
 
 **Location**: `packages/demo-react-pdf/`  
 **Run**: `pnpm dev:pdf`  
-**URL**: http://localhost:3001
+**URL**: http://localhost:54200
 
 **Features**:
 - Type-safe PDF generation
@@ -32,7 +32,7 @@ Build email templates with React components using `react-email`.
 
 **Location**: `packages/demo-react-email/`  
 **Run**: `pnpm dev:email`  
-**URL**: http://localhost:3002
+**URL**: http://localhost:54500
 
 **Features**:
 - Cross-client compatible HTML
@@ -45,7 +45,7 @@ Create interactive 3D scenes with React and Three.js using `@react-three/fiber`.
 
 **Location**: `packages/demo-react-three-fiber/`  
 **Run**: `pnpm dev:three`  
-**URL**: http://localhost:3003
+**URL**: http://localhost:54300
 
 **Features**:
 - Declarative 3D scenes
@@ -83,16 +83,31 @@ pnpm install
 ### Running Demos
 
 ```bash
-# Run all dev servers concurrently (not recommended due to port conflicts)
+# Run all dev servers concurrently
 pnpm dev
 
 # Run individual demos
-pnpm dev:presentation   # Presentation (port 5173)
-pnpm dev:pdf           # React PDF demo (port 3001)
-pnpm dev:email         # React Email demo (port 3002)
-pnpm dev:three         # React Three Fiber demo (port 3003)
+pnpm dev:presentation   # Presentation (port 54100)
+pnpm dev:pdf           # React PDF demo (port 54200)
+pnpm dev:email         # React Email demo (port 54500)
+pnpm dev:three         # React Three Fiber demo (port 54300)
+pnpm dev:car           # React Three Fiber Car demo (port 54400)
 pnpm dev:ink           # Ink CLI demo (terminal)
 ```
+
+### Cleanup Zombie Processes
+
+If you cancel the dev server with Ctrl+C and processes don't get killed properly:
+
+```bash
+# Kill all remaining demo processes
+pnpm cleanup
+
+# Or run the script directly
+./kill-demos.sh
+```
+
+This will kill all vite and email dev processes, and free up all demo ports.
 
 ### Building
 ```bash

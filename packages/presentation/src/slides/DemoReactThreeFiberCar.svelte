@@ -26,7 +26,7 @@
 			</div>
 			<div>
 				<DemoFrame
-					src="http://localhost:6008"
+					src="http://localhost:54400"
 					title="React Three Fiber Car Racing Demo"
 					controls="🎮 WASD: Drive • Space: Brake • Shift: Boost • C: Camera • R: Reset"
 				/>

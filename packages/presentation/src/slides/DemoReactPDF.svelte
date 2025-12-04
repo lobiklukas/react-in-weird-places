@@ -101,7 +101,7 @@ export default Invoice;
 			</div>
 
 			<Step>
-				<DemoFrame src="http://localhost:6001" title="React PDF Demo" />
+				<DemoFrame src="http://localhost:54200" title="React PDF Demo" />
 			</Step>
 		</div>
 	</Layout>

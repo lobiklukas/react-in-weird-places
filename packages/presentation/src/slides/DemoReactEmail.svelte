@@ -100,7 +100,7 @@ export default WelcomeEmail;
 
 			<Step>
 				<DemoFrame
-					src="http://localhost:6002"
+					src="http://localhost:54500"
 					title="React Email Demo"
 				/>
 			</Step>

@@ -14,7 +14,8 @@
     "build": "pnpm --filter '*' build",
     "build:presentation": "pnpm --filter presentation build",
     "preview:presentation": "pnpm --filter presentation preview",
-    "install:all": "pnpm install"
+    "install:all": "pnpm install",
+    "cleanup": "./kill-demos.sh"
   },
   "keywords": [
     "react",
@@ -25,6 +26,7 @@
   "author": "",
   "license": "MIT",
   "devDependencies": {
+    "turbo": "^2.6.3",
     "typescript": "^5.6.3"
   }
 }

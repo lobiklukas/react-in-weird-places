@@ -31,6 +31,7 @@ email-compatible primitives.
 ## Email Templates Included
 1. **welcome.tsx** - Welcome email with features overview
 2. **technical.tsx** - Technical explanation of React Email vs custom reconcilers
+3. **problematic.tsx** - ⚠️ Educational demo showing common email development mistakes (see PROBLEMATIC.md)
 
 ## Key Components
 - `<Html>`, `<Head>`, `<Body>` - Document structure
