@@ -9,6 +9,7 @@
     "dev:pdf": "pnpm --filter demo-react-pdf dev",
     "dev:email": "pnpm --filter demo-react-email dev",
     "dev:three": "pnpm --filter demo-react-three-fiber dev",
+    "dev:car": "pnpm --filter demo-react-three-fiber-car dev",
     "dev:ink": "pnpm --filter demo-ink dev",
     "build": "pnpm --filter '*' build",
     "build:presentation": "pnpm --filter presentation build",
