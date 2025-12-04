@@ -41,53 +41,6 @@
 	</Layout>
 </Slide>
 
-<!-- Future Possibilities -->
-<Slide animateRestart>
-	<Layout>
-		<div class="flex h-full items-center justify-center">
-			<div class="text-center">
-				<h2 class="text-[80px] font-bold">What's Next?</h2>
-				<Step>
-					<p class="mt-12 text-[56px] text-teal-400">Where else can React go?</p>
-				</Step>
-			</div>
-		</div>
-	</Layout>
-</Slide>
-
-<Slide animate>
-	<Layout>
-		<div class="flex h-full items-center justify-center">
-			<div class="grid grid-cols-2 gap-12 text-[36px]">
-				<Step>
-					<div class="rounded-lg bg-gray-800 p-8 text-center">
-						<p class="text-[56px]">🥽</p>
-						<p class="mt-4">VR/AR Headsets</p>
-					</div>
-				</Step>
-				<Step>
-					<div class="rounded-lg bg-gray-800 p-8 text-center">
-						<p class="text-[56px]">🚗</p>
-						<p class="mt-4">Car Interfaces</p>
-					</div>
-				</Step>
-				<Step>
-					<div class="rounded-lg bg-gray-800 p-8 text-center">
-						<p class="text-[56px]">🤖</p>
-						<p class="mt-4">IoT Devices</p>
-					</div>
-				</Step>
-				<Step>
-					<div class="rounded-lg bg-gray-800 p-8 text-center">
-						<p class="text-[56px]">🎵</p>
-						<p class="mt-4">Audio Interfaces</p>
-					</div>
-				</Step>
-			</div>
-		</div>
-	</Layout>
-</Slide>
-
 <!-- Resources -->
 <Slide animateRestart>
 	<Layout>
