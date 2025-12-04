@@ -2,13 +2,25 @@
 
 ## The Problem
 
-When you cancel the dev server with `Ctrl+C`, pnpm doesn't always kill all child processes properly. This leaves zombie vite and email dev processes running in the background, which causes port conflicts on the next run.
+When you cancel dev servers with `Ctrl+C`, child processes may not always be killed properly. This leaves zombie vite and email dev processes running in the background, causing port conflicts on the next run.
 
-## Solution
+## Solution with Turbo
 
-A cleanup script has been created to kill all remaining demo processes.
+This project now uses **Turbo** for task orchestration, which provides better process management:
+- Interactive TUI showing all running processes
+- Better signal handling for graceful shutdown
+- Daemon mode for persistent task runner
 
-### Using the Cleanup Script
+### Using Turbo's TUI
+
+When you run `pnpm dev`, Turbo opens an interactive terminal UI:
+- Press `Ctrl+Z` to access the menu
+- Press `Ctrl+C` to stop all processes gracefully
+- View process logs in real-time
+
+### Cleanup Script
+
+If processes still don't exit properly:
 
 ```bash
 # Option 1: Use the npm script (recommended)
@@ -21,15 +33,19 @@ pnpm cleanup
 ### What It Does
 
 The cleanup script:
-1. Finds and kills all vite processes
-2. Finds and kills all email dev processes  
-3. Kills any processes running on demo ports (54100, 54200, 54300, 54400, 54500)
+1. Stops the Turbo daemon
+2. Finds and kills all vite processes
+3. Finds and kills all email dev processes  
+4. Kills any processes running on demo ports (54100, 54200, 54300, 54400, 54500)
 
 ### Manual Cleanup
 
 If you need to manually kill processes:
 
 ```bash
+# Stop turbo daemon
+turbo daemon stop
+
 # Kill all vite processes
 pkill -f "vite/bin/vite.js"
 
@@ -43,6 +59,9 @@ kill -9 $(lsof -ti :PORT)
 ### Checking for Zombie Processes
 
 ```bash
+# Check turbo daemon status
+turbo daemon status
+
 # Check for vite processes
 ps aux | grep vite | grep -v grep
 
@@ -55,11 +74,19 @@ lsof -ti :54100  # Replace with your port number
 
 ## Prevention
 
-Unfortunately, there's no perfect solution to prevent this with pnpm's parallel execution. The best practice is:
+Turbo provides better process management than raw pnpm, but the best practice is still:
 
-1. Use `Ctrl+C` once and wait a few seconds
-2. If processes don't exit, run `pnpm cleanup`
-3. Then restart with `pnpm dev`
+1. Use `Ctrl+C` once to stop all processes
+2. Wait for Turbo to gracefully shut down (2-3 seconds)
+3. If processes don't exit, run `pnpm cleanup`
+4. Restart with `pnpm dev`
+
+### Turbo Advantages
+
+- **Graceful shutdown**: Turbo handles SIGINT/SIGTERM properly
+- **Process monitoring**: Interactive TUI shows all process states
+- **Daemon mode**: Turbo daemon manages long-running tasks
+- **Better cleanup**: Automatically cleans up child processes
 
 ## Port Assignments
 

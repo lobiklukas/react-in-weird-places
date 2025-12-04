@@ -2,6 +2,12 @@
 
 echo "🔍 Finding and killing demo processes..."
 
+# Kill turbo daemon if running
+if command -v turbo &> /dev/null; then
+    echo "Stopping turbo daemon..."
+    turbo daemon stop 2>/dev/null || true
+fi
+
 # Kill vite processes
 VITE_PIDS=$(pgrep -f "vite/bin/vite.js")
 if [ -n "$VITE_PIDS" ]; then

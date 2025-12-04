@@ -80,10 +80,18 @@ npm install -g pnpm
 pnpm install
 ```
 
+### Task Runner
+
+This project uses **Turbo** for efficient task orchestration and caching. Turbo provides:
+- Better process management and cleanup
+- Parallel execution with proper dependency handling
+- Task caching for faster builds
+- Interactive TUI (Terminal UI) for monitoring tasks
+
 ### Running Demos
 
 ```bash
-# Run all dev servers concurrently
+# Run all dev servers concurrently (uses Turbo)
 pnpm dev
 
 # Run individual demos
@@ -95,28 +103,35 @@ pnpm dev:car           # React Three Fiber Car demo (port 54400)
 pnpm dev:ink           # Ink CLI demo (terminal)
 ```
 
+Turbo provides an interactive TUI that shows all running processes. Press `Ctrl+Z` to access the menu, or `Ctrl+C` to stop all processes.
+
 ### Cleanup Zombie Processes
 
-If you cancel the dev server with Ctrl+C and processes don't get killed properly:
+If processes don't get killed properly after stopping:
 
 ```bash
-# Kill all remaining demo processes
+# Kill all remaining demo processes and turbo daemon
 pnpm cleanup
 
 # Or run the script directly
 ./kill-demos.sh
 ```
 
-This will kill all vite and email dev processes, and free up all demo ports.
+This will:
+- Stop the Turbo daemon
+- Kill all vite and email dev processes
+- Free up all demo ports
 
 ### Building
 ```bash
-# Build all packages
+# Build all packages (uses Turbo)
 pnpm build
 
 # Build specific package
 pnpm build:presentation
 ```
+
+Turbo will cache build outputs and only rebuild what changed.
 
 ## 📚 Project Structure
 
@@ -189,11 +204,23 @@ Each demo package contains its own README with:
 # Install dependency in specific package
 pnpm --filter demo-react-pdf add <package>
 
-# Run command in specific package
-pnpm --filter presentation dev
+# Run command in specific package using Turbo
+turbo run dev --filter=presentation
 
 # Run command in all packages
-pnpm -r dev
+turbo run build
+```
+
+### Turbo Commands
+```bash
+# View turbo daemon status
+turbo daemon status
+
+# Clean turbo cache
+turbo daemon clean
+
+# Stop turbo daemon
+turbo daemon stop
 ```
 
 ## 🎨 Use Cases for Custom Reconcilers
