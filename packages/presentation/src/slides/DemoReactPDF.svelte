@@ -58,7 +58,7 @@
 	<Layout>
 		<div class="flex h-full items-center justify-center">
 			<div class="w-full max-w-[900px]">
-				<Code class="text-[32px]" lang="jsx" lines="1-25|1-2|4-24|10-14|16-20">
+				<Code class="text-[32px]" lang="jsx" lines="1-2|4-8|10-21|15-18">
 					{`
 import {Document, Page, Text, View, StyleSheet}
   from '@react-pdf/renderer';

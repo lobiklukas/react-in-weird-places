@@ -63,7 +63,7 @@
 <Slide animate>
 	<Layout>
 		<div class="h-center absolute text-[36px]">
-			<Code lang="jsx" lines="1-18|1-2|4-17|8-11|13-16">
+			<Code lang="jsx" lines="1-2|4-18|7-11|13-17">
 				{`
 import {useCurrentFrame, interpolate} from 'remotion';
 import {AbsoluteFill} from 'remotion';

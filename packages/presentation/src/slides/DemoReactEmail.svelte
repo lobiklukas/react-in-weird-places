@@ -58,7 +58,7 @@
 	<Layout>
 		<div class="flex h-full items-center justify-center">
 			<div class="w-full max-w-[900px]">
-				<Code class="text-[32px]" lang="jsx" lines="1-20|1-3|5-19|9-12|14-17">
+				<Code class="text-[32px]" lang="jsx" lines="1-2|4-20|7-9|11-13|15-17">
 					{`
 import {Html, Button, Container, Heading}
   from '@react-email/components';
