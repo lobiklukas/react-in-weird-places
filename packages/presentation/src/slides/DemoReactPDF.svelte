@@ -112,40 +112,32 @@ export default Invoice;
 		<div class="flex h-full flex-col items-center justify-center gap-8 px-20">
 			<p class="text-[56px] font-bold">PDF Use Cases</p>
 			<div class="grid grid-cols-2 gap-6 text-[28px] w-full">
-				<Step>
-					<div class="rounded-lg bg-gray-800 p-6">
-						<p class="text-[36px] mb-2">📧</p>
-						<p class="font-bold">Invoices & Receipts</p>
-						<p class="text-[20px] text-gray-400 mt-2">
-							Generate on-the-fly from data
-						</p>
-					</div>
-				</Step>
-				<Step>
-					<div class="rounded-lg bg-gray-800 p-6">
-						<p class="text-[36px] mb-2">📊</p>
-						<p class="font-bold">Reports & Analytics</p>
-						<p class="text-[20px] text-gray-400 mt-2">
-							Dynamic charts and tables
-						</p>
-					</div>
-				</Step>
-				<Step>
-					<div class="rounded-lg bg-gray-800 p-6">
-						<p class="text-[36px] mb-2">📜</p>
-						<p class="font-bold">Certificates</p>
-						<p class="text-[20px] text-gray-400 mt-2">Personalized documents</p>
-					</div>
-				</Step>
-				<Step>
-					<div class="rounded-lg bg-gray-800 p-6">
-						<p class="text-[36px] mb-2">📋</p>
-						<p class="font-bold">Forms & Contracts</p>
-						<p class="text-[20px] text-gray-400 mt-2">
-							Legal documents with data
-						</p>
-					</div>
-				</Step>
+				<div class="rounded-lg bg-gray-800 p-6">
+					<p class="text-[36px] mb-2">📧</p>
+					<p class="font-bold">Invoices & Receipts</p>
+					<p class="text-[20px] text-gray-400 mt-2">
+						Generate on-the-fly from data
+					</p>
+				</div>
+				<div class="rounded-lg bg-gray-800 p-6">
+					<p class="text-[36px] mb-2">📊</p>
+					<p class="font-bold">Reports & Analytics</p>
+					<p class="text-[20px] text-gray-400 mt-2">
+						Dynamic charts and tables
+					</p>
+				</div>
+				<div class="rounded-lg bg-gray-800 p-6">
+					<p class="text-[36px] mb-2">📜</p>
+					<p class="font-bold">Certificates</p>
+					<p class="text-[20px] text-gray-400 mt-2">Personalized documents</p>
+				</div>
+				<div class="rounded-lg bg-gray-800 p-6">
+					<p class="text-[36px] mb-2">📋</p>
+					<p class="font-bold">Forms & Contracts</p>
+					<p class="text-[20px] text-gray-400 mt-2">
+						Legal documents with data
+					</p>
+				</div>
 			</div>
 		</div>
 	</Layout>

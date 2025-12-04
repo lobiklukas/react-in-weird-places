@@ -119,25 +119,18 @@ render(<Counter />);
 		<div class="flex h-full flex-col items-center justify-center gap-8">
 			<p class="text-[56px] font-bold">Companies Using Ink</p>
 			<div class="grid grid-cols-3 gap-8 text-[32px]">
-				<Step
-					><div class="rounded-lg bg-gray-800 p-6">
-						📦 Cloudflare Wrangler
-					</div></Step
-				>
-				<Step
-					><div class="rounded-lg bg-gray-800 p-6">
-						🤖 GitHub Copilot CLI
-					</div></Step
-				>
-				<Step
-					><div class="rounded-lg bg-gray-800 p-6">
-						🧠 Google Gemini CLI
-					</div></Step
-				>
-				<Step><div class="rounded-lg bg-gray-800 p-6">🗃️ Prisma</div></Step>
-				<Step><div class="rounded-lg bg-gray-800 p-6">⚡ Gatsby</div></Step>
-				<Step><div class="rounded-lg bg-gray-800 p-6">📱 Shopify CLI</div></Step
-				>
+				<div class="rounded-lg bg-gray-800 p-6">
+					📦 Cloudflare Wrangler
+				</div>
+				<div class="rounded-lg bg-gray-800 p-6">
+					🤖 GitHub Copilot CLI
+				</div>
+				<div class="rounded-lg bg-gray-800 p-6">
+					🧠 Google Gemini CLI
+				</div>
+				<div class="rounded-lg bg-gray-800 p-6">🗃️ Prisma</div>
+				<div class="rounded-lg bg-gray-800 p-6">⚡ Gatsby</div>
+				<div class="rounded-lg bg-gray-800 p-6">📱 Shopify CLI</div>
 			</div>
 		</div>
 	</Layout>

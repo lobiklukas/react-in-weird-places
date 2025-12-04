@@ -14,17 +14,6 @@
 	</Layout>
 </Slide>
 
-<Slide animate>
-	<Layout>
-		<div class="flex h-full items-center justify-center gap-[100px]">
-			<div class="text-center">
-				<p class="text-[72px]">🌐</p>
-				<p class="mt-4 text-[48px]">react-dom</p>
-				<p class="text-[32px] text-gray-400">Web Browsers</p>
-			</div>
-		</div>
-	</Layout>
-</Slide>
 
 <Slide animate>
 	<Layout>

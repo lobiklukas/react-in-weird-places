@@ -90,9 +90,9 @@ export const MyVideo = () => {
 		<div class="flex h-full flex-col items-center justify-center gap-12">
 			<p class="text-[56px] font-bold">Built with Remotion</p>
 			<div class="flex gap-12 text-[36px]">
-				<Step><div class="rounded-lg bg-gray-800 p-8">🔥 Fireship Videos</div></Step>
-				<Step><div class="rounded-lg bg-gray-800 p-8">🎁 GitHub Unwrapped</div></Step>
-				<Step><div class="rounded-lg bg-gray-800 p-8">📊 Data Visualizations</div></Step>
+				<div class="rounded-lg bg-gray-800 p-8">🔥 Fireship Videos</div>
+				<div class="rounded-lg bg-gray-800 p-8">🎁 GitHub Unwrapped</div>
+				<div class="rounded-lg bg-gray-800 p-8">📊 Data Visualizations</div>
 			</div>
 		</div>
 	</Layout>

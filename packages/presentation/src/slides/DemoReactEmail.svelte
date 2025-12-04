@@ -113,48 +113,38 @@ export default WelcomeEmail;
 		<div class="flex h-full flex-col items-center justify-center gap-8 px-20">
 			<p class="text-[56px] font-bold">Why React Email?</p>
 			<div class="grid grid-cols-2 gap-6 text-[26px] w-full">
-				<Step>
-					<div class="rounded-lg bg-gray-800 border-l-4 border-green-500 p-6">
-						<p class="text-[36px] mb-2">✅</p>
-						<p class="font-bold">Cross-Client Compatible</p>
-						<p class="text-[20px] text-gray-400 mt-2">
-							Works in Gmail, Outlook, Apple Mail, etc.
-						</p>
-					</div>
-				</Step>
-				<Step>
-					<div class="rounded-lg bg-gray-800 border-l-4 border-blue-500 p-6">
-						<p class="text-[36px] mb-2">🎨</p>
-						<p class="font-bold">Component-Based</p>
-						<p class="text-[20px] text-gray-400 mt-2">
-							Reusable email components
-						</p>
-					</div>
-				</Step>
-				<Step>
-					<div class="rounded-lg bg-gray-800 border-l-4 border-purple-500 p-6">
-						<p class="text-[36px] mb-2">👁️</p>
-						<p class="font-bold">Live Preview</p>
-						<p class="text-[20px] text-gray-400 mt-2">
-							See changes in real-time
-						</p>
-					</div>
-				</Step>
-				<Step>
-					<div class="rounded-lg bg-gray-800 border-l-4 border-teal-500 p-6">
-						<p class="text-[36px] mb-2">📤</p>
-						<p class="font-bold">Export to HTML</p>
-						<p class="text-[20px] text-gray-400 mt-2">
-							Production-ready templates
-						</p>
-					</div>
-				</Step>
+				<div class="rounded-lg bg-gray-800 border-l-4 border-green-500 p-6">
+					<p class="text-[36px] mb-2">✅</p>
+					<p class="font-bold">Cross-Client Compatible</p>
+					<p class="text-[20px] text-gray-400 mt-2">
+						Works in Gmail, Outlook, Apple Mail, etc.
+					</p>
+				</div>
+				<div class="rounded-lg bg-gray-800 border-l-4 border-blue-500 p-6">
+					<p class="text-[36px] mb-2">🎨</p>
+					<p class="font-bold">Component-Based</p>
+					<p class="text-[20px] text-gray-400 mt-2">
+						Reusable email components
+					</p>
+				</div>
+				<div class="rounded-lg bg-gray-800 border-l-4 border-purple-500 p-6">
+					<p class="text-[36px] mb-2">👁️</p>
+					<p class="font-bold">Live Preview</p>
+					<p class="text-[20px] text-gray-400 mt-2">
+						See changes in real-time
+					</p>
+				</div>
+				<div class="rounded-lg bg-gray-800 border-l-4 border-teal-500 p-6">
+					<p class="text-[36px] mb-2">📤</p>
+					<p class="font-bold">Export to HTML</p>
+					<p class="text-[20px] text-gray-400 mt-2">
+						Production-ready templates
+					</p>
+				</div>
 			</div>
-			<Step>
-				<p class="text-[22px] text-gray-400 mt-4">
-					Used by: Vercel, Linear, Raycast, Resend
-				</p>
-			</Step>
+			<p class="text-[22px] text-gray-400 mt-4">
+				Used by: Vercel, Linear, Raycast, Resend
+			</p>
 		</div>
 	</Layout>
 </Slide>
