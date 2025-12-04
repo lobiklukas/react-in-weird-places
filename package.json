@@ -1,0 +1,29 @@
+{
+  "name": "react-weird-places-monorepo",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Monorepo for React in Weird Places presentation and demos",
+  "scripts": {
+    "dev": "pnpm --filter '*' dev",
+    "dev:presentation": "pnpm --filter presentation dev",
+    "dev:pdf": "pnpm --filter demo-react-pdf dev",
+    "dev:email": "pnpm --filter demo-react-email dev",
+    "dev:three": "pnpm --filter demo-react-three-fiber dev",
+    "dev:ink": "pnpm --filter demo-ink dev",
+    "build": "pnpm --filter '*' build",
+    "build:presentation": "pnpm --filter presentation build",
+    "preview:presentation": "pnpm --filter presentation preview",
+    "install:all": "pnpm install"
+  },
+  "keywords": [
+    "react",
+    "presentation",
+    "reconciler",
+    "custom-renderer"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^5.6.3"
+  }
+}
