@@ -16,6 +16,44 @@
 	</Layout>
 </Slide>
 
+<!-- The Problem -->
+<Slide animate>
+	<Layout>
+		<div class="flex h-full flex-col items-center justify-center gap-8 px-20">
+			<p class="text-[56px] font-bold">The Problem</p>
+			<div class="grid grid-cols-1 gap-6 text-[24px] w-full max-w-[1100px]">
+				<Step>
+					<div class="rounded-lg bg-gray-800 border-l-4 border-red-500 p-6">
+						<p class="text-[36px] mb-2">📝</p>
+						<p class="font-bold text-[32px]">console.log() Chaos</p>
+						<p class="text-[20px] text-gray-400 mt-2">
+							Managing terminal output, clearing screens, updating lines is tedious
+						</p>
+					</div>
+				</Step>
+				<Step>
+					<div class="rounded-lg bg-gray-800 border-l-4 border-orange-500 p-6">
+						<p class="text-[36px] mb-2">📐</p>
+						<p class="font-bold text-[32px]">Manual Layout Calculations</p>
+						<p class="text-[20px] text-gray-400 mt-2">
+							Libraries like Blessed: complex APIs, manual positioning, no hot reload
+						</p>
+					</div>
+				</Step>
+				<Step>
+					<div class="rounded-lg bg-gray-800 border-l-4 border-yellow-500 p-6">
+						<p class="text-[36px] mb-2">🔄</p>
+						<p class="font-bold text-[32px]">Stateful Terminal Updates</p>
+						<p class="text-[20px] text-gray-400 mt-2">
+							Tracking cursor position, clearing old output, handling resize events
+						</p>
+					</div>
+				</Step>
+			</div>
+		</div>
+	</Layout>
+</Slide>
+
 <Slide animate>
 	<Layout>
 		<div class="flex h-full items-center justify-center">

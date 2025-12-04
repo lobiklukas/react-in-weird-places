@@ -16,6 +16,44 @@
 	</Layout>
 </Slide>
 
+<!-- The Problem -->
+<Slide animate>
+	<Layout>
+		<div class="flex h-full flex-col items-center justify-center gap-8 px-20">
+			<p class="text-[56px] font-bold">The Problem</p>
+			<div class="grid grid-cols-1 gap-6 text-[24px] w-full max-w-[1100px]">
+				<Step>
+					<div class="rounded-lg bg-gray-800 border-l-4 border-red-500 p-6">
+						<p class="text-[36px] mb-2">📝</p>
+						<p class="font-bold text-[32px]">Writing Nested HTML Tables Manually</p>
+						<p class="text-[20px] text-gray-400 mt-2">
+							Email clients require complex nested table layouts for compatibility
+						</p>
+					</div>
+				</Step>
+				<Step>
+					<div class="rounded-lg bg-gray-800 border-l-4 border-orange-500 p-6">
+						<p class="text-[36px] mb-2">🔧</p>
+						<p class="font-bold text-[32px]">Testing Across 20+ Email Clients</p>
+						<p class="text-[20px] text-gray-400 mt-2">
+							Gmail, Outlook, Apple Mail all render HTML differently
+						</p>
+					</div>
+				</Step>
+				<Step>
+					<div class="rounded-lg bg-gray-800 border-l-4 border-yellow-500 p-6">
+						<p class="text-[36px] mb-2">♻️</p>
+						<p class="font-bold text-[32px]">No Component Reusability</p>
+						<p class="text-[20px] text-gray-400 mt-2">
+							Copy-paste HTML strings, hard to maintain consistency
+						</p>
+					</div>
+				</Step>
+			</div>
+		</div>
+	</Layout>
+</Slide>
+
 <Slide animate>
 	<Layout>
 		<div class="flex h-full items-center justify-center">

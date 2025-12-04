@@ -16,6 +16,44 @@
 	</Layout>
 </Slide>
 
+<!-- The Problem -->
+<Slide animate>
+	<Layout>
+		<div class="flex h-full flex-col items-center justify-center gap-8 px-20">
+			<p class="text-[56px] font-bold">The Problem</p>
+			<div class="grid grid-cols-1 gap-6 text-[24px] w-full max-w-[1100px]">
+				<Step>
+					<div class="rounded-lg bg-gray-800 border-l-4 border-red-500 p-6">
+						<p class="text-[36px] mb-2">🎬</p>
+						<p class="font-bold text-[32px]">Manual Keyframing in After Effects</p>
+						<p class="text-[20px] text-gray-400 mt-2">
+							Creating animations frame-by-frame, can't be version controlled
+						</p>
+					</div>
+				</Step>
+				<Step>
+					<div class="rounded-lg bg-gray-800 border-l-4 border-orange-500 p-6">
+						<p class="text-[36px] mb-2">📊</p>
+						<p class="font-bold text-[32px]">Can't Generate Thousands of Videos</p>
+						<p class="text-[20px] text-gray-400 mt-2">
+							Need unique videos for each user/data? Manual work doesn't scale
+						</p>
+					</div>
+				</Step>
+				<Step>
+					<div class="rounded-lg bg-gray-800 border-l-4 border-yellow-500 p-6">
+						<p class="text-[36px] mb-2">💾</p>
+						<p class="font-bold text-[32px]">Binary Files, No Git Workflow</p>
+						<p class="text-[20px] text-gray-400 mt-2">
+							After Effects projects aren't code - hard to collaborate and review
+						</p>
+					</div>
+				</Step>
+			</div>
+		</div>
+	</Layout>
+</Slide>
+
 <!-- Code Example -->
 <Slide animate>
 	<Layout>
