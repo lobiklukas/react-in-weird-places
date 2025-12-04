@@ -117,15 +117,38 @@ render(<Counter />);
 
 <Slide animate>
 	<Layout>
-		<div class="flex h-full flex-col items-center justify-center gap-8">
+		<div class="flex h-full flex-col items-center justify-center gap-10 px-16">
 			<p class="text-[56px] font-bold">Companies Using Ink</p>
-			<div class="grid grid-cols-3 gap-8 text-[32px]">
-				<div class="rounded-lg bg-gray-800 p-6">📦 Cloudflare Wrangler</div>
-				<div class="rounded-lg bg-gray-800 p-6">🤖 GitHub Copilot CLI</div>
-				<div class="rounded-lg bg-gray-800 p-6">🧠 Google Gemini CLI</div>
-				<div class="rounded-lg bg-gray-800 p-6">🗃️ Prisma</div>
-				<div class="rounded-lg bg-gray-800 p-6">⚡ Gatsby</div>
-				<div class="rounded-lg bg-gray-800 p-6">📱 Shopify CLI</div>
+			
+			<!-- AI & Agentic Coding -->
+			<div class="w-full max-w-[1200px]">
+				<p class="text-[32px] font-bold text-teal-400 mb-4">🤖 AI & Agentic Coding Tools</p>
+				<div class="grid grid-cols-3 gap-6 text-[28px]">
+					<div class="rounded-lg bg-gray-800 p-6">Claude Code</div>
+					<div class="rounded-lg bg-gray-800 p-6">Gemini CLI</div>
+					<div class="rounded-lg bg-gray-800 p-6">GitHub Copilot</div>
+				</div>
+			</div>
+
+			<!-- Major Companies -->
+			<div class="w-full max-w-[1200px]">
+				<p class="text-[32px] font-bold text-blue-400 mb-4">🏢 Major Companies & Platforms</p>
+				<div class="grid grid-cols-3 gap-6 text-[28px]">
+					<div class="rounded-lg bg-gray-800 p-6">Cloudflare</div>
+					<div class="rounded-lg bg-gray-800 p-6">Shopify</div>
+					<div class="rounded-lg bg-gray-800 p-6">Linear</div>
+				</div>
+			</div>
+
+			<!-- Design & Developer Tools -->
+			<div class="w-full max-w-[1200px]">
+				<p class="text-[32px] font-bold text-purple-400 mb-4">🎨 Design & Developer Tools</p>
+				<div class="grid grid-cols-4 gap-6 text-[28px]">
+					<div class="rounded-lg bg-gray-800 p-6">Canva CLI</div>
+					<div class="rounded-lg bg-gray-800 p-6">Gatsby</div>
+					<div class="rounded-lg bg-gray-800 p-6">Prisma</div>
+					<div class="rounded-lg bg-gray-800 p-6">New York Times</div>
+				</div>
 			</div>
 		</div>
 	</Layout>
