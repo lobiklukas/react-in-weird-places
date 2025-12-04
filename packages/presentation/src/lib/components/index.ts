@@ -1,4 +1,5 @@
 import Code from './code.svelte'
+import DemoFrame from './demo-frame.svelte'
 import FitText from './fit.svelte'
 import Markdown from './markdown.svelte'
 import Media from './media.svelte'
@@ -13,6 +14,7 @@ import Vertical from './vertical.svelte'
 
 export {
 	Code,
+	DemoFrame,
 	FitText,
 	Markdown,
 	Media,

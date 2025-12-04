@@ -9,6 +9,7 @@
 		WeirdStuffIntro,
 		DemoInk,
 		DemoReactThreeFiber,
+		DemoReactThreeFiberCar,
 		DemoReactPDF,
 		DemoReactEmail,
 		DemoRemotion,
@@ -28,6 +29,7 @@
 	<WeirdStuffIntro />
 	<DemoInk />
 	<DemoReactThreeFiber />
+	<DemoReactThreeFiberCar />
 	<DemoReactPDF />
 	<DemoReactEmail />
 	<DemoRemotion />

@@ -17,7 +17,7 @@
 <Slide animate>
 	<Layout>
 		<div class="flex h-full items-center justify-center">
-			<div class="w-full max-w-[900px]">
+			<div class="w-full max-w-[1200px]">
 				<Code class="text-[32px]" lang="javascript" lines="1-22|1-3|5-8|10-14|16-19|21-22">
 					{`
 import Reconciler from 'react-reconciler';
@@ -27,15 +27,15 @@ const hostConfig = {
   createInstance(type, props) {
     // Create your target element
   },
-  
+
   appendChild(parent, child) {
     // Add child to parent
   },
-  
+
   commitUpdate(instance, updatePayload, type, oldProps, newProps) {
     // Update your target element
   },
-  
+
   // ... many more methods
 };
 
@@ -63,16 +63,16 @@ const hostConfig = {
   createInstance(type, props) {
     return { type, props, children: [] };
   },
-  
+
   appendChild(parent, child) {
     parent.children.push(child);
   },
-  
+
   commitMount(instance) {
     // Log to console when component mounts
     console.log(\`<\${instance.type}>\`, instance.props);
   },
-  
+
   // ... other required methods
 };
 

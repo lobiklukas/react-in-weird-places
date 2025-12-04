@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Slide, Step, Code } from '@components'
+	import { Slide, Step, Code, DemoFrame } from '@components'
 	import Layout from '../layout.svelte'
 </script>
 
@@ -22,7 +22,7 @@
 			<div class="w-full max-w-[900px]">
 				<Code class="text-[32px]" lang="jsx" lines="1-20|1-3|5-19|9-12|14-17">
 					{`
-import {Html, Button, Container, Heading} 
+import {Html, Button, Container, Heading}
   from '@react-email/components';
 
 const WelcomeEmail = ({ name }) => (
@@ -31,11 +31,11 @@ const WelcomeEmail = ({ name }) => (
       <Heading>
         Welcome {name}! 🎉
       </Heading>
-      
+
       <Button href="https://example.com">
         Get Started
       </Button>
-      
+
       <p>
         We're excited to have you on board!
       </p>
@@ -59,22 +59,12 @@ export default WelcomeEmail;
 				<h2 class="text-[64px] font-bold">🎬 Live Demo</h2>
 				<p class="mt-4 text-[36px] text-teal-400">Email Preview</p>
 			</div>
-			
-			<Step>
-				<div class="demo-container rounded-lg bg-gray-900 border-2 border-teal-500 overflow-hidden w-full max-w-5xl h-[520px]">
-					<iframe 
-						src="http://localhost:6002" 
-						class="w-full h-full border-none"
-						title="React Email Demo"
-					></iframe>
-				</div>
-			</Step>
 
 			<Step>
-				<div class="flex gap-8 text-[24px] text-gray-400">
-					<p>🌐 Open: <span class="text-teal-400">localhost:6002</span></p>
-					<p>💻 Run: <code class="text-teal-400">pnpm dev:email</code></p>
-				</div>
+				<DemoFrame
+					src="http://localhost:6002"
+					title="React Email Demo"
+				/>
 			</Step>
 		</div>
 	</Layout>
@@ -89,28 +79,36 @@ export default WelcomeEmail;
 					<div class="rounded-lg bg-gray-800 border-l-4 border-green-500 p-6">
 						<p class="text-[36px] mb-2">✅</p>
 						<p class="font-bold">Cross-Client Compatible</p>
-						<p class="text-[20px] text-gray-400 mt-2">Works in Gmail, Outlook, Apple Mail, etc.</p>
+						<p class="text-[20px] text-gray-400 mt-2">
+							Works in Gmail, Outlook, Apple Mail, etc.
+						</p>
 					</div>
 				</Step>
 				<Step>
 					<div class="rounded-lg bg-gray-800 border-l-4 border-blue-500 p-6">
 						<p class="text-[36px] mb-2">🎨</p>
 						<p class="font-bold">Component-Based</p>
-						<p class="text-[20px] text-gray-400 mt-2">Reusable email components</p>
+						<p class="text-[20px] text-gray-400 mt-2">
+							Reusable email components
+						</p>
 					</div>
 				</Step>
 				<Step>
 					<div class="rounded-lg bg-gray-800 border-l-4 border-purple-500 p-6">
 						<p class="text-[36px] mb-2">👁️</p>
 						<p class="font-bold">Live Preview</p>
-						<p class="text-[20px] text-gray-400 mt-2">See changes in real-time</p>
+						<p class="text-[20px] text-gray-400 mt-2">
+							See changes in real-time
+						</p>
 					</div>
 				</Step>
 				<Step>
 					<div class="rounded-lg bg-gray-800 border-l-4 border-teal-500 p-6">
 						<p class="text-[36px] mb-2">📤</p>
 						<p class="font-bold">Export to HTML</p>
-						<p class="text-[20px] text-gray-400 mt-2">Production-ready templates</p>
+						<p class="text-[20px] text-gray-400 mt-2">
+							Production-ready templates
+						</p>
 					</div>
 				</Step>
 			</div>

@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Slide, Step, Code } from '@components'
+	import { Slide, Step, Code, DemoFrame } from '@components'
 	import Layout from '../layout.svelte'
 </script>
 
@@ -62,15 +62,17 @@ export default Invoice;
 				<p class="mt-4 text-[36px] text-teal-400">Interactive PDF Preview</p>
 			</div>
 			
-			<Step>
-				<div class="demo-container rounded-lg bg-gray-900 border-2 border-teal-500 overflow-hidden w-full max-w-5xl h-[520px]">
-					<iframe 
-						src="http://localhost:6001" 
-						class="w-full h-full border-none"
-						title="React PDF Demo"
-					></iframe>
-				</div>
-			</Step>
+		<Step>
+			<DemoFrame
+				src="http://localhost:6001"
+				title="React PDF Demo"
+				height="520px"
+				width="100%"
+				maxWidth="5xl"
+				overflow="hidden"
+				padding="p-0"
+			/>
+		</Step>
 
 			<Step>
 				<div class="flex gap-8 text-[24px] text-gray-400">
