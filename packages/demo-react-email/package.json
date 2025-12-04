@@ -4,7 +4,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "email dev --dir src/emails --port 6002",
+    "dev": "email dev --dir src/emails --port 9001",
     "export": "email export"
   },
   "dependencies": {
