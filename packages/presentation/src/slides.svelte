@@ -13,6 +13,7 @@
 		DemoReactEmail,
 		DemoRemotion,
 		OtherTargets,
+		StylingChallenges,
 		BuildingRenderers,
 		Conclusion,
 		// ReconciliationAppendix, // Optional: Uncomment for Q&A
@@ -24,6 +25,7 @@
 	<IntroSlides />
 	<ReconciliationOverview />
 	<TraditionalTargets />
+	<StylingChallenges />
 	<WeirdStuffIntro />
 	<DemoInk />
 	<DemoReactThreeFiber />

@@ -10,6 +10,7 @@ export { default as DemoReactPDF } from './DemoReactPDF.svelte'
 export { default as DemoReactEmail } from './DemoReactEmail.svelte'
 export { default as DemoRemotion } from './DemoRemotion.svelte'
 export { default as OtherTargets } from './OtherTargets.svelte'
+export { default as StylingChallenges } from './StylingChallenges.svelte'
 export { default as BuildingRenderers } from './BuildingRenderers.svelte'
 export { default as Conclusion } from './Conclusion.svelte'
 

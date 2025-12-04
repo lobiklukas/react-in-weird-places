@@ -61,7 +61,7 @@
 	<Layout>
 		<div class="flex h-full items-center justify-center">
 			<div class="w-full max-w-[900px]">
-				<Code class="text-[36px]" lang="jsx" lines="1-2|4-15|7-12">
+				<Code class="text-[36px]" lang="jsx" lines="1-17|1-2|4-15|7-12">
 					{`
 import React from 'react';
 import {render, Text, Box} from 'ink';
@@ -119,7 +119,7 @@ render(<Counter />);
 	<Layout>
 		<div class="flex h-full flex-col items-center justify-center gap-10 px-16">
 			<p class="text-[56px] font-bold">Companies Using Ink</p>
-			
+
 			<!-- AI & Agentic Coding -->
 			<div class="w-full max-w-[1200px]">
 				<p class="text-[32px] font-bold text-teal-400 mb-4">🤖 AI & Agentic Coding Tools</p>
