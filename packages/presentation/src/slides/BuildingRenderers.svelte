@@ -7,7 +7,7 @@
 <Slide animateRestart>
 	<Layout>
 		<div class="flex h-full items-center justify-center">
-			<Step class="w-[1200px] text-[64px] leading-[120%]">
+			<Step class="w-full max-w-[1200px] text-[64px] leading-[120%]">
 				How to Build a Custom Renderer
 			</Step>
 		</div>
@@ -16,9 +16,10 @@
 
 <Slide animate>
 	<Layout>
-		<div class="h-center absolute text-[32px]">
-			<Code lang="javascript" lines="1-22|1-3|5-8|10-14|16-19|21-22">
-				{`
+		<div class="flex h-full items-center justify-center">
+			<div class="w-full max-w-[900px]">
+				<Code class="text-[32px]" lang="javascript" lines="1-22|1-3|5-8|10-14|16-19|21-22">
+					{`
 import Reconciler from 'react-reconciler';
 
 // 1. Define your host config
@@ -43,8 +44,9 @@ const MyRenderer = Reconciler(hostConfig);
 
 // 3. Render React elements
 MyRenderer.render(<App />, container);
-				`}
-			</Code>
+					`}
+				</Code>
+			</div>
 		</div>
 	</Layout>
 </Slide>
@@ -52,9 +54,10 @@ MyRenderer.render(<App />, container);
 <!-- Real Example: Simple Renderer -->
 <Slide animate>
 	<Layout>
-		<div class="h-center absolute text-[28px]">
-			<Code lang="javascript" lines="1-30|1-7|9-17|19-23|25-30">
-				{`
+		<div class="flex h-full items-center justify-center">
+			<div class="w-full max-w-[950px]">
+				<Code class="text-[28px]" lang="javascript" lines="1-30|1-7|9-17|19-23|25-30">
+					{`
 // Simple Console Renderer Example
 const hostConfig = {
   createInstance(type, props) {
@@ -86,8 +89,9 @@ render(
     <span>Hello Console!</span>
   </div>
 );
-				`}
-			</Code>
+					`}
+				</Code>
+			</div>
 		</div>
 	</Layout>
 </Slide>

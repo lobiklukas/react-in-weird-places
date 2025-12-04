@@ -1,14 +1,9 @@
-@import '@fontsource-variable/manrope';
-@import '@fontsource-variable/jetbrains-mono';
-
 :root {
 	--r-background-color: hsl(226 19% 13%);
-	/* --r-main-font: 'Manrope Variable'; */
-	--r-main-font: 'MonoLisa';
+	--r-main-font: 'Geist Sans', system-ui, sans-serif;
 	--r-main-font-size: 42px;
 	--r-main-color: hsl(226 19% 98%);
-	/* --r-code-font: 'JetBrains Mono Variable'; */
-	--r-code-font: 'MonoLisa';
+	--r-code-font: 'Geist Mono', monospace;
 	--r-link-color: hsl(180 100% 50%);
 }
 

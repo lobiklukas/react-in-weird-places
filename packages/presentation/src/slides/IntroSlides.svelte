@@ -7,7 +7,7 @@
 <Slide animateRestart>
 	<Layout>
 		<div class="flex h-full items-center justify-center">
-			<Step class="w-[1000px] text-[64px] leading-[120%]">
+			<Step class="w-full max-w-[1000px] text-[64px] leading-[120%]">
 				What is React?
 			</Step>
 		</div>

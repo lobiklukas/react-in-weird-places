@@ -18,9 +18,10 @@
 
 <Slide animate>
 	<Layout>
-		<div class="h-center absolute text-[32px]">
-			<Code lang="jsx" lines="1-20|1-3|5-19|9-12|14-17">
-				{`
+		<div class="flex h-full items-center justify-center">
+			<div class="w-full max-w-[900px]">
+				<Code class="text-[32px]" lang="jsx" lines="1-20|1-3|5-19|9-12|14-17">
+					{`
 import {Html, Button, Container, Heading} 
   from '@react-email/components';
 
@@ -43,8 +44,9 @@ const WelcomeEmail = ({ name }) => (
 );
 
 export default WelcomeEmail;
-				`}
-			</Code>
+					`}
+				</Code>
+			</div>
 		</div>
 	</Layout>
 </Slide>
@@ -59,10 +61,10 @@ export default WelcomeEmail;
 			</div>
 			
 			<Step>
-				<div class="demo-container rounded-lg bg-gray-900 border-2 border-teal-500 overflow-hidden w-full max-w-5xl" style="height: 520px;">
+				<div class="demo-container rounded-lg bg-gray-900 border-2 border-teal-500 overflow-hidden w-full max-w-5xl h-[520px]">
 					<iframe 
-						src="http://localhost:3002" 
-						style="width: 100%; height: 100%; border: none;"
+						src="http://localhost:6002" 
+						class="w-full h-full border-none"
 						title="React Email Demo"
 					></iframe>
 				</div>
@@ -70,7 +72,7 @@ export default WelcomeEmail;
 
 			<Step>
 				<div class="flex gap-8 text-[24px] text-gray-400">
-					<p>🌐 Open: <span class="text-teal-400">localhost:3002</span></p>
+					<p>🌐 Open: <span class="text-teal-400">localhost:6002</span></p>
 					<p>💻 Run: <code class="text-teal-400">pnpm dev:email</code></p>
 				</div>
 			</Step>

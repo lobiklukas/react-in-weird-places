@@ -7,7 +7,7 @@
 <Slide animateRestart>
 	<Layout>
 		<div class="flex h-full items-center justify-center">
-			<Step class="w-[1200px] text-[64px] leading-[120%]">
+			<Step class="max-w-[1200px] w-full text-[64px] leading-[120%]">
 				The Secret: React Reconciler
 			</Step>
 		</div>
@@ -16,9 +16,10 @@
 
 <Slide animate>
 	<Layout>
-		<div class="h-center absolute text-[42px]">
-			<Code lang="javascript" lines="1-12|1-4|6-9|11-12">
-				{`
+		<div class="flex h-full items-center justify-center">
+			<div class="w-full max-w-[900px]">
+				<Code class="text-[42px]" lang="javascript" lines="1-12|1-4|6-9|11-12">
+					{`
 // React Core
 - Component model
 - Virtual DOM diffing
@@ -31,7 +32,8 @@
 
 // Custom Renderer = Target anything!
 				`}
-			</Code>
+				</Code>
+			</div>
 		</div>
 	</Layout>
 </Slide>

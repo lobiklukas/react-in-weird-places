@@ -23,7 +23,7 @@
 	<Layout>
 		<div class="flex h-full flex-col items-center justify-center gap-8 px-16">
 			<p class="text-[56px] font-bold">React's 3-Layer Architecture</p>
-			<div class="w-full flex items-center justify-center" style="height: 350px;">
+			<div class="w-full flex items-center justify-center h-[350px]">
 				<Mermaid diagram={architectureDiagram} scale={0.9} />
 			</div>
 			<Step>
@@ -51,7 +51,7 @@
 	<Layout>
 		<div class="flex h-full flex-col items-center justify-center gap-8 px-12">
 			<p class="text-[56px] font-bold">The Magic: 3 Steps</p>
-			<div class="w-full flex items-center justify-center" style="height: 200px;">
+			<div class="w-full flex items-center justify-center h-[200px]">
 				<Mermaid diagram={phasesDiagram} scale={0.85} />
 			</div>
 			<div class="grid grid-cols-3 gap-8 text-[24px] w-full">

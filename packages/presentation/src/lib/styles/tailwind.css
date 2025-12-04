@@ -1,21 +1,22 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
-@layer utilities {
-	.h-center {
-		top: 50%;
-		left: 50%;
-		translate: -50% -50%;
-	}
+@theme {
+	--font-sans: "Geist Sans", system-ui, sans-serif;
+	--font-mono: "Geist Mono", monospace;
+}
 
-	.pattern {
-		background: repeating-linear-gradient(
-			45deg,
-			hsl(226 19% 13%),
-			hsl(226 19% 13%) 10px,
-			hsl(226 19% 15%) 10px,
-			hsl(226 19% 15%) 60px
-		);
-	}
+@utility h-center {
+	top: 50%;
+	left: 50%;
+	translate: -50% -50%;
+}
+
+@utility pattern {
+	background: repeating-linear-gradient(
+		45deg,
+		hsl(226 19% 13%),
+		hsl(226 19% 13%) 10px,
+		hsl(226 19% 15%) 10px,
+		hsl(226 19% 15%) 60px
+	);
 }

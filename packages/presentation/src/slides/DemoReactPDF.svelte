@@ -18,9 +18,10 @@
 
 <Slide animate>
 	<Layout>
-		<div class="h-center absolute text-[32px]">
-			<Code lang="jsx" lines="1-25|1-2|4-24|10-14|16-20">
-				{`
+		<div class="flex h-full items-center justify-center">
+			<div class="w-full max-w-[900px]">
+				<Code class="text-[32px]" lang="jsx" lines="1-25|1-2|4-24|10-14|16-20">
+					{`
 import {Document, Page, Text, View, StyleSheet} 
   from '@react-pdf/renderer';
 
@@ -45,8 +46,9 @@ const Invoice = () => (
 
 // Renders to actual PDF file!
 export default Invoice;
-				`}
-			</Code>
+					`}
+				</Code>
+			</div>
 		</div>
 	</Layout>
 </Slide>
@@ -61,10 +63,10 @@ export default Invoice;
 			</div>
 			
 			<Step>
-				<div class="demo-container rounded-lg bg-gray-900 border-2 border-teal-500 overflow-hidden w-full max-w-5xl" style="height: 520px;">
+				<div class="demo-container rounded-lg bg-gray-900 border-2 border-teal-500 overflow-hidden w-full max-w-5xl h-[520px]">
 					<iframe 
-						src="http://localhost:3001" 
-						style="width: 100%; height: 100%; border: none;"
+						src="http://localhost:6001" 
+						class="w-full h-full border-none"
 						title="React PDF Demo"
 					></iframe>
 				</div>
@@ -72,7 +74,7 @@ export default Invoice;
 
 			<Step>
 				<div class="flex gap-8 text-[24px] text-gray-400">
-					<p>🌐 Open: <span class="text-teal-400">localhost:3001</span></p>
+					<p>🌐 Open: <span class="text-teal-400">localhost:6001</span></p>
 					<p>💻 Run: <code class="text-teal-400">pnpm dev:pdf</code></p>
 				</div>
 			</Step>

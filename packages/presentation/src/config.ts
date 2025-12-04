@@ -32,13 +32,13 @@ const options: Reveal.Options = {
 	// bring your own layout
 	disableLayout: true,
 	// display mode used to show slides
-	display: 'grid',
+	display: 'flex',
 	// center slides on the screen
 	center: false,
 	// auto-animate duration
-	autoAnimateDuration: 1,
+	autoAnimateDuration: 0.3,
 	// auto-animate easing
-	autoAnimateEasing: 'ease',
+	autoAnimateEasing: 'ease-out',
 	// animate unmatched elements
 	autoAnimateUnmatched: true,
 	// hide cursor

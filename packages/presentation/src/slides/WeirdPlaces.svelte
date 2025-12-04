@@ -30,9 +30,10 @@
 
 <Slide animate>
 	<Layout>
-		<div class="h-center absolute text-[36px]">
-			<Code lang="jsx" lines="1-16|1-3|5-14|8|10-12">
-				{`
+		<div class="flex h-full items-center justify-center">
+			<div class="w-full max-w-[900px]">
+				<Code class="text-[36px]" lang="jsx" lines="1-16|1-3|5-14|8|10-12">
+					{`
 import React from 'react';
 import {render, Text, Box} from 'ink';
 
@@ -50,8 +51,9 @@ const Counter = () => {
 };
 
 render(<Counter />);
-				`}
-			</Code>
+					`}
+				</Code>
+			</div>
 		</div>
 	</Layout>
 </Slide>
@@ -87,9 +89,10 @@ render(<Counter />);
 
 <Slide animate>
 	<Layout>
-		<div class="h-center absolute text-[36px]">
-			<Code lang="jsx" lines="1-18|1-2|4-17|8-11|13-16">
-				{`
+		<div class="flex h-full items-center justify-center">
+			<div class="w-full max-w-[900px]">
+				<Code class="text-[36px]" lang="jsx" lines="1-18|1-2|4-17|8-11|13-16">
+					{`
 import {useCurrentFrame, interpolate} from 'remotion';
 import {AbsoluteFill} from 'remotion';
 
@@ -108,8 +111,9 @@ export const MyVideo = () => {
     </AbsoluteFill>
   );
 };
-				`}
-			</Code>
+					`}
+				</Code>
+			</div>
 		</div>
 	</Layout>
 </Slide>
@@ -142,9 +146,10 @@ export const MyVideo = () => {
 
 <Slide animate>
 	<Layout>
-		<div class="h-center absolute text-[36px]">
-			<Code lang="jsx" lines="1-17|1-2|4-16|7-12">
-				{`
+		<div class="flex h-full items-center justify-center">
+			<div class="w-full max-w-[900px]">
+				<Code class="text-[36px]" lang="jsx" lines="1-17|1-2|4-16|7-12">
+					{`
 import {Canvas} from '@react-three/fiber';
 import {OrbitControls} from '@react-three/drei';
 
@@ -165,8 +170,9 @@ export default function App() {
     </Canvas>
   );
 }
-				`}
-			</Code>
+					`}
+				</Code>
+			</div>
 		</div>
 	</Layout>
 </Slide>

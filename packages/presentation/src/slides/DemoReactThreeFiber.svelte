@@ -18,9 +18,10 @@
 
 <Slide animate>
 	<Layout>
-		<div class="h-center absolute text-[36px]">
-			<Code lang="jsx" lines="1-17|1-2|4-16|7-12">
-				{`
+		<div class="flex h-full items-center justify-center">
+			<div class="w-full max-w-[900px]">
+				<Code class="text-[36px]" lang="jsx" lines="1-17|1-2|4-16|7-12">
+					{`
 import {Canvas} from '@react-three/fiber';
 import {OrbitControls} from '@react-three/drei';
 
@@ -41,8 +42,9 @@ export default function App() {
     </Canvas>
   );
 }
-				`}
-			</Code>
+					`}
+				</Code>
+			</div>
 		</div>
 	</Layout>
 </Slide>
@@ -58,10 +60,10 @@ export default function App() {
 			
 			<Step>
 				<div class="demo-container rounded-lg bg-gray-900 border-2 border-teal-500 p-4 w-full max-w-5xl">
-					<div class="bg-black rounded" style="height: 500px; position: relative;">
+					<div class="bg-black rounded h-[500px] relative">
 						<iframe 
-							src="http://localhost:3003" 
-							style="width: 100%; height: 100%; border: none; border-radius: 8px;"
+							src="http://localhost:6003" 
+							class="w-full h-full border-none rounded-lg"
 							title="React Three Fiber Demo"
 						></iframe>
 						<div class="absolute bottom-4 left-4 bg-gray-900/90 rounded px-4 py-2 text-[18px]">
@@ -73,7 +75,7 @@ export default function App() {
 
 			<Step>
 				<div class="flex gap-8 text-[24px] text-gray-400">
-					<p>🌐 Open: <span class="text-teal-400">localhost:3003</span></p>
+					<p>🌐 Open: <span class="text-teal-400">localhost:6003</span></p>
 					<p>💻 Run: <code class="text-teal-400">pnpm dev:three</code></p>
 				</div>
 			</Step>
