@@ -25,7 +25,9 @@
 				<Step>
 					<div class="rounded-lg bg-gray-800 border-l-4 border-red-500 p-6">
 						<p class="text-[36px] mb-2">🎬</p>
-						<p class="font-bold text-[32px]">Manual Keyframing in After Effects</p>
+						<p class="font-bold text-[32px]">
+							Manual Keyframing in After Effects
+						</p>
 						<p class="text-[20px] text-gray-400 mt-2">
 							Creating animations frame-by-frame, can't be version controlled
 						</p>
@@ -34,7 +36,9 @@
 				<Step>
 					<div class="rounded-lg bg-gray-800 border-l-4 border-orange-500 p-6">
 						<p class="text-[36px] mb-2">📊</p>
-						<p class="font-bold text-[32px]">Can't Generate Thousands of Videos</p>
+						<p class="font-bold text-[32px]">
+							Can't Generate Thousands of Videos
+						</p>
 						<p class="text-[20px] text-gray-400 mt-2">
 							Need unique videos for each user/data? Manual work doesn't scale
 						</p>
@@ -45,7 +49,8 @@
 						<p class="text-[36px] mb-2">💾</p>
 						<p class="font-bold text-[32px]">Binary Files, No Git Workflow</p>
 						<p class="text-[20px] text-gray-400 mt-2">
-							After Effects projects aren't code - hard to collaborate and review
+							After Effects projects aren't code - hard to collaborate and
+							review
 						</p>
 					</div>
 				</Step>
@@ -65,7 +70,7 @@ import {AbsoluteFill} from 'remotion';
 
 export const MyVideo = () => {
   const frame = useCurrentFrame();
-  
+
   const opacity = interpolate(
     frame,
     [0, 30],
@@ -102,10 +107,19 @@ export const MyVideo = () => {
 <Slide animateRestart>
 	<Layout>
 		<div class="flex h-full flex-col items-center justify-center gap-8">
-			<p class="text-[56px] font-bold">Video Example</p>
-			<div class="text-[32px] text-gray-400">
-				<p>Play a sample Remotion video here</p>
-				<p class="mt-4 text-teal-400">or showcase GitHub Unwrapped example</p>
+			<p class="text-[56px] font-bold">Greenscreen Example</p>
+			<div class="text-center">
+				<p class="text-[32px] text-gray-400 mb-8">
+					Video manipulation with React
+				</p>
+				<a
+					href="https://www.remotion.dev/docs/video-manipulation#greenscreen-example"
+					target="_blank"
+					rel="noreferrer"
+					class="inline-block text-[36px] px-12 py-6 bg-teal-600 hover:bg-teal-500 rounded-lg transition-colors"
+				>
+					View Live Demo →
+				</a>
 			</div>
 		</div>
 	</Layout>
