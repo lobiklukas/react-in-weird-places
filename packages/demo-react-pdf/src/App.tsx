@@ -57,7 +57,7 @@ const MyDocument = () => (
     <Page size="A4" style={styles.page}>
       <View style={styles.section}>
         <Text style={styles.header}>React in Weird Places - Demo PDF</Text>
-        <Text style={styles.title}>📄 React PDF Demo</Text>
+        <Text style={styles.title}>React PDF Demo</Text>
         <Text style={styles.text}>
           This PDF was generated using React components! @react-pdf/renderer uses a custom React reconciler
           to transform JSX into PDF primitives.
@@ -112,7 +112,7 @@ const MyDocument = () => (
     <Page size="A4" style={styles.page}>
       <View style={styles.section}>
         <Text style={styles.header}>React in Weird Places - Demo PDF</Text>
-        <Text style={styles.title}>🎨 Styling in React PDF</Text>
+        <Text style={styles.title}>Styling in React PDF</Text>
         <Text style={styles.text}>
           React PDF uses a subset of CSS-like styles via JavaScript objects.
         </Text>

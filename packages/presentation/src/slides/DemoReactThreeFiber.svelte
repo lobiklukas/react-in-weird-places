@@ -58,13 +58,13 @@ export default function App() {
 				<p class="mt-4 text-[36px] text-teal-400">Interactive 3D Scene</p>
 			</div>
 
-		<Step>
-			<DemoFrame
-				src="http://localhost:6003"
-				title="React Three Fiber Demo"
-				controls="🖱️ Drag to orbit • Scroll to zoom • Click objects"
-			/>
-		</Step>
+			<Step>
+				<DemoFrame
+					src="http://localhost:6003"
+					title="React Three Fiber Demo"
+					controls="🖱️ Drag to orbit • Scroll to zoom • Click objects"
+				/>
+			</Step>
 		</div>
 	</Layout>
 </Slide>
