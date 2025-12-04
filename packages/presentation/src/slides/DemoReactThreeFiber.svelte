@@ -20,7 +20,7 @@
 	<Layout>
 		<div class="flex h-full items-center justify-center">
 			<div class="w-full max-w-[900px]">
-				<Code class="text-[36px]" lang="jsx" lines="1-17|1-2|4-16|7-12">
+				<Code class="text-[36px]" lang="jsx" lines="1-2|4-11|13-20|1-20">
 					{`
 import {Canvas} from '@react-three/fiber';
 import {OrbitControls} from '@react-three/drei';

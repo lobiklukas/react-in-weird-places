@@ -60,24 +60,13 @@ render(<Counter />);
 			>
 				<div class="text-[28px] text-gray-300 space-y-4">
 					<Step>
-						<div class="flex justify-between gap-8">
-							<div class="flex flex-col items-center gap-4">
-								<span class="text-[48px]">💻</span>
-								<div
-									class="text-[18px] text-gray-400 flex flex-col items-center gap-2"
-								>
-									<span>Run:</span>
-									<code class="text-teal-400">pnpm dev:ink</code>
-								</div>
-							</div>
+						<div class="flex flex-col items-center gap-4">
+							<span class="text-[48px]">💻</span>
 							<div
-								class="bg-gray-800 rounded p-4 flex-1 font-mono text-left text-[20px]"
+								class="text-[18px] text-gray-400 flex flex-col items-center gap-2"
 							>
-								<p class="text-gray-400">Demo Features:</p>
-								<p class="text-white">• Interactive menu with arrow keys</p>
-								<p class="text-white">• Live counter with React state</p>
-								<p class="text-white">• Flexbox layouts in terminal</p>
-								<p class="text-white">• ANSI colors & styling</p>
+								<span>Run:</span>
+								<code class="text-teal-400">pnpm dev:ink</code>
 							</div>
 						</div>
 					</Step>

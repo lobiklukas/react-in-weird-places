@@ -51,46 +51,28 @@ MyRenderer.render(<App />, container);
 	</Layout>
 </Slide>
 
-<!-- Real Example: Simple Renderer -->
+<!-- Real Example: Link to Tutorial -->
 <Slide animate>
 	<Layout>
 		<div class="flex h-full items-center justify-center">
-			<div class="w-full max-w-[950px]">
-				<Code class="text-[28px]" lang="javascript" lines="1-30|1-7|9-17|19-23|25-30">
-					{`
-// Simple Console Renderer Example
-const hostConfig = {
-  createInstance(type, props) {
-    return { type, props, children: [] };
-  },
+			<div class="text-center max-w-[1100px]">
+				<p class="text-[64px] font-bold mb-8">📚 Learn More</p>
+				<p class="text-[42px] text-teal-400 mb-12">Building Custom Renderers</p>
 
-  appendChild(parent, child) {
-    parent.children.push(child);
-  },
-
-  commitMount(instance) {
-    // Log to console when component mounts
-    console.log(\`<\${instance.type}>\`, instance.props);
-  },
-
-  // ... other required methods
-};
-
-const ConsoleRenderer = Reconciler(hostConfig);
-
-function render(element) {
-  const container = { children: [] };
-  ConsoleRenderer.updateContainer(element, container, null, null);
-}
-
-// Usage
-render(
-  <div className="hello">
-    <span>Hello Console!</span>
-  </div>
-);
-					`}
-				</Code>
+				<Step>
+					<div class="rounded-lg bg-gray-800 p-12 mb-8">
+						<p class="text-[32px] text-gray-300 mb-6">
+							Step-by-step tutorial with real code examples
+						</p>
+						<a
+							href="https://agent-hunt.medium.com/hello-world-custom-react-renderer-9a95b7cd04bc"
+							target="_blank"
+							class="text-[36px] text-blue-400 hover:text-blue-300 underline break-all"
+						>
+							agent-hunt.medium.com/hello-world-custom-react-renderer-9a95b7cd04bc
+						</a>
+					</div>
+				</Step>
 			</div>
 		</div>
 	</Layout>

@@ -21,7 +21,9 @@
 	<Layout>
 		<div class="flex h-full items-center justify-center">
 			<div class="w-full max-w-[1100px]">
-				<p class="mb-8 text-[56px] font-bold text-center">React Three Fiber Integration</p>
+				<p class="mb-8 text-[56px] font-bold text-center">
+					React Three Fiber Integration
+				</p>
 				<Code class="text-[28px]" lang="typescript" lines="1-18|2-7|9-13|15-18">
 					{`
 // Physics: Cannon.js RaycastVehicle
@@ -59,14 +61,13 @@ useEffect(() => {
 				<h2 class="text-[64px] font-bold">🏁 Live Demo</h2>
 				<p class="mt-4 text-[36px] text-teal-400">Interactive Car Racing</p>
 			</div>
-
-		<Step>
-			<DemoFrame
-				src="http://localhost:6008"
-				title="React Three Fiber Car Racing Demo"
-				controls="🎮 WASD: Drive • Space: Brake • Shift: Boost • C: Camera • R: Reset"
-			/>
-		</Step>
+			<div>
+				<DemoFrame
+					src="http://localhost:6008"
+					title="React Three Fiber Car Racing Demo"
+					controls="🎮 WASD: Drive • Space: Brake • Shift: Boost • C: Camera • R: Reset"
+				/>
+			</div>
 		</div>
 	</Layout>
 </Slide>
@@ -81,56 +82,72 @@ useEffect(() => {
 					<div class="rounded-lg bg-gray-800 p-6">
 						<div class="text-[56px] mb-2">🏠</div>
 						<div class="text-teal-400 font-bold">Real Estate</div>
-						<div class="text-[22px] text-gray-400 mt-2">Zillow 3D Tours, Virtual Showrooms</div>
+						<div class="text-[22px] text-gray-400 mt-2">
+							Zillow 3D Tours, Virtual Showrooms
+						</div>
 					</div>
 				</Step>
 				<Step>
 					<div class="rounded-lg bg-gray-800 p-6">
 						<div class="text-[56px] mb-2">🎮</div>
 						<div class="text-teal-400 font-bold">Browser Games</div>
-						<div class="text-[22px] text-gray-400 mt-2">Racing, FPS, Multiplayer Simulations</div>
+						<div class="text-[22px] text-gray-400 mt-2">
+							Racing, FPS, Multiplayer Simulations
+						</div>
 					</div>
 				</Step>
 				<Step>
 					<div class="rounded-lg bg-gray-800 p-6">
 						<div class="text-[56px] mb-2">🎨</div>
 						<div class="text-teal-400 font-bold">Design Tools</div>
-						<div class="text-[22px] text-gray-400 mt-2">Bezi, CAD Software, 3D Editors</div>
+						<div class="text-[22px] text-gray-400 mt-2">
+							Bezi, CAD Software, 3D Editors
+						</div>
 					</div>
 				</Step>
 				<Step>
 					<div class="rounded-lg bg-gray-800 p-6">
 						<div class="text-[56px] mb-2">📦</div>
 						<div class="text-teal-400 font-bold">E-commerce</div>
-						<div class="text-[22px] text-gray-400 mt-2">Product Configurators, AR Preview</div>
+						<div class="text-[22px] text-gray-400 mt-2">
+							Product Configurators, AR Preview
+						</div>
 					</div>
 				</Step>
 				<Step>
 					<div class="rounded-lg bg-gray-800 p-6">
 						<div class="text-[56px] mb-2">🎭</div>
 						<div class="text-teal-400 font-bold">Avatar Creators</div>
-						<div class="text-[22px] text-gray-400 mt-2">Character Customization, VR</div>
+						<div class="text-[22px] text-gray-400 mt-2">
+							Character Customization, VR
+						</div>
 					</div>
 				</Step>
 				<Step>
 					<div class="rounded-lg bg-gray-800 p-6">
 						<div class="text-[56px] mb-2">🎓</div>
 						<div class="text-teal-400 font-bold">Education</div>
-						<div class="text-[22px] text-gray-400 mt-2">Interactive Simulations, Training</div>
+						<div class="text-[22px] text-gray-400 mt-2">
+							Interactive Simulations, Training
+						</div>
 					</div>
 				</Step>
 				<Step>
 					<div class="rounded-lg bg-gray-800 p-6">
 						<div class="text-[56px] mb-2">🏛️</div>
 						<div class="text-teal-400 font-bold">Museums</div>
-						<div class="text-[22px] text-gray-400 mt-2">Virtual Exhibits, Cultural Heritage</div>
+						<div class="text-[22px] text-gray-400 mt-2">
+							Virtual Exhibits, Cultural Heritage
+						</div>
 					</div>
 				</Step>
 				<Step>
 					<div class="rounded-lg bg-gray-800 p-6">
 						<div class="text-[56px] mb-2">📊</div>
 						<div class="text-teal-400 font-bold">Data Viz</div>
-						<div class="text-[22px] text-gray-400 mt-2">3D Charts, Engineering Analytics</div>
+						<div class="text-[22px] text-gray-400 mt-2">
+							3D Charts, Engineering Analytics
+						</div>
 					</div>
 				</Step>
 			</div>

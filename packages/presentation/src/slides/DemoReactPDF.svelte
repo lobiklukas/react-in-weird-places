@@ -22,7 +22,7 @@
 			<div class="w-full max-w-[900px]">
 				<Code class="text-[32px]" lang="jsx" lines="1-25|1-2|4-24|10-14|16-20">
 					{`
-import {Document, Page, Text, View, StyleSheet} 
+import {Document, Page, Text, View, StyleSheet}
   from '@react-pdf/renderer';
 
 const styles = StyleSheet.create({
@@ -35,7 +35,7 @@ const Invoice = () => (
   <Document>
     <Page style={styles.page}>
       <Text style={styles.title}>Invoice #001</Text>
-      
+
       <View style={styles.section}>
         <Text>Date: {new Date().toLocaleDateString()}</Text>
         <Text>Total: $99.99</Text>
@@ -61,24 +61,9 @@ export default Invoice;
 				<h2 class="text-[64px] font-bold">🎬 Live Demo</h2>
 				<p class="mt-4 text-[36px] text-teal-400">Interactive PDF Preview</p>
 			</div>
-			
-		<Step>
-			<DemoFrame
-				src="http://localhost:6001"
-				title="React PDF Demo"
-				height="520px"
-				width="100%"
-				maxWidth="5xl"
-				overflow="hidden"
-				padding="p-0"
-			/>
-		</Step>
 
 			<Step>
-				<div class="flex gap-8 text-[24px] text-gray-400">
-					<p>🌐 Open: <span class="text-teal-400">localhost:6001</span></p>
-					<p>💻 Run: <code class="text-teal-400">pnpm dev:pdf</code></p>
-				</div>
+				<DemoFrame src="http://localhost:6001" title="React PDF Demo" />
 			</Step>
 		</div>
 	</Layout>
@@ -93,14 +78,18 @@ export default Invoice;
 					<div class="rounded-lg bg-gray-800 p-6">
 						<p class="text-[36px] mb-2">📧</p>
 						<p class="font-bold">Invoices & Receipts</p>
-						<p class="text-[20px] text-gray-400 mt-2">Generate on-the-fly from data</p>
+						<p class="text-[20px] text-gray-400 mt-2">
+							Generate on-the-fly from data
+						</p>
 					</div>
 				</Step>
 				<Step>
 					<div class="rounded-lg bg-gray-800 p-6">
 						<p class="text-[36px] mb-2">📊</p>
 						<p class="font-bold">Reports & Analytics</p>
-						<p class="text-[20px] text-gray-400 mt-2">Dynamic charts and tables</p>
+						<p class="text-[20px] text-gray-400 mt-2">
+							Dynamic charts and tables
+						</p>
 					</div>
 				</Step>
 				<Step>
@@ -114,7 +103,9 @@ export default Invoice;
 					<div class="rounded-lg bg-gray-800 p-6">
 						<p class="text-[36px] mb-2">📋</p>
 						<p class="font-bold">Forms & Contracts</p>
-						<p class="text-[20px] text-gray-400 mt-2">Legal documents with data</p>
+						<p class="text-[20px] text-gray-400 mt-2">
+							Legal documents with data
+						</p>
 					</div>
 				</Step>
 			</div>
