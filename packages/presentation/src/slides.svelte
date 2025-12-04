@@ -3,8 +3,7 @@
 	import {
 		TitleSlide,
 		IntroSlides,
-		ReconcilerIntro,
-		ReconciliationSimplified,
+		ReconciliationOverview,
 		TraditionalTargets,
 		WeirdStuffIntro,
 		DemoInk,
@@ -23,8 +22,7 @@
 <Presentation>
 	<TitleSlide />
 	<IntroSlides />
-	<ReconcilerIntro />
-	<ReconciliationSimplified />
+	<ReconciliationOverview />
 	<TraditionalTargets />
 	<WeirdStuffIntro />
 	<DemoInk />

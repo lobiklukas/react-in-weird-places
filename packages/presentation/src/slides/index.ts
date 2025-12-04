@@ -1,8 +1,6 @@
 export { default as TitleSlide } from './TitleSlide.svelte'
 export { default as IntroSlides } from './IntroSlides.svelte'
-export { default as ReconcilerIntro } from './ReconcilerIntro.svelte'
-export { default as ReconciliationSimplified } from './ReconciliationSimplified.svelte'
-export { default as ReconciliationAppendix } from './ReconciliationAppendix.svelte'
+export { default as ReconciliationOverview } from './ReconciliationOverview.svelte'
 export { default as TraditionalTargets } from './TraditionalTargets.svelte'
 export { default as WeirdStuffIntro } from './WeirdStuffIntro.svelte'
 export { default as DemoInk } from './DemoInk.svelte'
@@ -15,7 +13,12 @@ export { default as OtherTargets } from './OtherTargets.svelte'
 export { default as BuildingRenderers } from './BuildingRenderers.svelte'
 export { default as Conclusion } from './Conclusion.svelte'
 
-// Legacy exports (can be removed after migration)
+// Appendix / Deep Dive exports (optional for Q&A)
 export { default as ReconciliationDeepDive } from './ReconciliationDeepDive.svelte'
+export { default as ReconciliationAppendix } from './ReconciliationAppendix.svelte'
+
+// Legacy exports (replaced by ReconciliationOverview)
+export { default as ReconcilerIntro } from './ReconcilerIntro.svelte'
+export { default as ReconciliationSimplified } from './ReconciliationSimplified.svelte'
 export { default as WeirdPlaces } from './WeirdPlaces.svelte'
 export { default as MoreExamples } from './MoreExamples.svelte'
