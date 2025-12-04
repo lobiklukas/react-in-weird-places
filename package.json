@@ -4,7 +4,7 @@
   "private": true,
   "description": "Monorepo for React in Weird Places presentation and demos",
   "scripts": {
-    "dev": "pnpm --filter '*' dev",
+    "dev": "pnpm --filter '!demo-ink' --filter '*' dev",
     "dev:presentation": "pnpm --filter presentation dev",
     "dev:pdf": "pnpm --filter demo-react-pdf dev",
     "dev:email": "pnpm --filter demo-react-email dev",
