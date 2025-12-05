@@ -1,152 +1,162 @@
-import React, { useState, useEffect } from 'react';
-import { Box, Text, Newline, useInput, useApp } from 'ink';
+import { useState, useEffect } from 'react';
+import { Box, useInput, useApp } from 'ink';
+import { Header } from './components/Header.js';
+import { MetricsPanel } from './components/MetricsPanel.js';
+import { NetworkPanel } from './components/NetworkPanel.js';
+import { ProcessManager } from './components/ProcessManager.js';
+import { StatsPanel } from './components/StatsPanel.js';
+import { Footer } from './components/Footer.js';
+import { useSystemMetrics } from './hooks/useSystemMetrics.js';
+import { useNetworkMetrics } from './hooks/useNetworkMetrics.js';
+import { useNodeProcesses } from './hooks/useNodeProcesses.js';
+import { useTerminalSize } from './hooks/useTerminalSize.js';
+import { calculateMaxVisibleProcesses } from './lib/layout.js';
+import { Stats } from './types/dashboard.js';
 
 const App = () => {
-    const [counter, setCounter] = useState(0);
-    const [selectedOption, setSelectedOption] = useState(0);
+    const [isPaused, setIsPaused] = useState(false);
+    const [selectedPanel, setSelectedPanel] = useState(0);
+    const [selectedProcessIndex, setSelectedProcessIndex] = useState(0);
+    const [statusMessage, setStatusMessage] = useState<{ text: string; type: 'success' | 'error' } | undefined>();
+    const [stats, setStats] = useState<Stats>({
+        processes: 0,
+        requests: 0,
+        completed: 0,
+        errorRate: 0
+    });
+
     const { exit } = useApp();
+    const { rows: terminalHeight, columns: terminalWidth } = useTerminalSize();
+    const metrics = useSystemMetrics(isPaused);
+    const networkMetrics = useNetworkMetrics(isPaused);
+    const { processes, refreshProcesses } = useNodeProcesses(isPaused);
+    
+    // Calculate available height for process list using layout utilities
+    const maxVisibleProcesses = calculateMaxVisibleProcesses(terminalHeight);
 
-    const options = [
-        { label: 'About Ink', value: 'about' },
-        { label: 'Counter Demo', value: 'counter' },
-        { label: 'Technical Details', value: 'technical' },
-        { label: 'Exit', value: 'exit' },
-    ];
+    // Update stats based on process data
+    useEffect(() => {
+        const totalProcesses = processes.length;
+        const demoProcesses = processes.filter(p => p.port >= 54000 && p.port <= 55000).length;
+        const totalPorts = processes.length;
+        const avgCpu = processes.length > 0 
+            ? processes.reduce((sum, p) => sum + p.cpu, 0) / processes.length 
+            : 0;
 
-    useInput((input, key) => {
-        if (key.upArrow) {
-            setSelectedOption((prev) => (prev > 0 ? prev - 1 : options.length - 1));
+        setStats({
+            processes: totalProcesses,
+            requests: demoProcesses,
+            completed: totalPorts,
+            errorRate: avgCpu
+        });
+    }, [processes]);
+
+    // Clear status message after 3 seconds
+    useEffect(() => {
+        if (statusMessage) {
+            const timeout = setTimeout(() => {
+                setStatusMessage(undefined);
+            }, 3000);
+            return () => clearTimeout(timeout);
         }
+    }, [statusMessage]);
 
-        if (key.downArrow) {
-            setSelectedOption((prev) => (prev < options.length - 1 ? prev + 1 : 0));
+    // Reset selected index if out of bounds
+    useEffect(() => {
+        if (selectedProcessIndex >= processes.length && processes.length > 0) {
+            setSelectedProcessIndex(processes.length - 1);
+        } else if (processes.length === 0) {
+            setSelectedProcessIndex(0);
         }
+    }, [processes.length, selectedProcessIndex]);
 
-        if (key.return) {
-            const selected = options[selectedOption].value;
-            if (selected === 'exit') {
-                exit();
-            } else if (selected === 'counter') {
-                setCounter((prev) => prev + 1);
+    const killProcess = (pid: number) => {
+        try {
+            // Try graceful termination first
+            process.kill(pid, 'SIGTERM');
+            setStatusMessage({ text: `Process ${pid} terminated`, type: 'success' });
+            // Refresh process list after a short delay
+            setTimeout(() => refreshProcesses(), 500);
+        } catch (error) {
+            // If SIGTERM fails, try force kill
+            try {
+                process.kill(pid, 'SIGKILL');
+                setStatusMessage({ text: `Process ${pid} force killed`, type: 'success' });
+                setTimeout(() => refreshProcesses(), 500);
+            } catch (killError) {
+                setStatusMessage({ 
+                    text: `Failed to kill ${pid}: ${error instanceof Error ? error.message : 'Unknown error'}`, 
+                    type: 'error' 
+                });
             }
         }
+    };
 
-        if (input === 'q') {
+    // Handle keyboard input
+    useInput((input, key) => {
+        if (input === 'q' || input === 'Q') {
             exit();
+        }
+
+        if (input === ' ') {
+            setIsPaused(prev => !prev);
+        }
+
+        if (input === 'r' || input === 'R') {
+            setSelectedProcessIndex(0);
+            setStatusMessage(undefined);
+        }
+
+        if (input === '1') setSelectedPanel(0);
+        if (input === '2') setSelectedPanel(1);
+        if (input === '3') setSelectedPanel(2);
+
+        // Process navigation (only when process manager is focused)
+        if (selectedPanel === 1 && processes.length > 0) {
+            if (key.upArrow) {
+                setSelectedProcessIndex(prev => Math.max(0, prev - 1));
+            }
+            if (key.downArrow) {
+                setSelectedProcessIndex(prev => Math.min(processes.length - 1, prev + 1));
+            }
+            if (key.return || input === 'k' || input === 'K') {
+                const selectedProcess = processes[selectedProcessIndex];
+                if (selectedProcess) {
+                    killProcess(selectedProcess.pid);
+                }
+            }
         }
     });
 
-    useEffect(() => {
-        const timer = setInterval(() => {
-            // Auto-increment counter every second when counter option is selected
-            if (options[selectedOption].value === 'counter') {
-                setCounter((prev) => prev + 1);
-            }
-        }, 1000);
-
-        return () => clearInterval(timer);
-    }, [selectedOption]);
-
     return (
-        <Box flexDirection="column" padding={1}>
-            <Box borderStyle="round" borderColor="cyan" padding={1} marginBottom={1}>
-                <Text bold color="cyan">
-                    🖥️ React Ink Demo - CLI Interface with React
-                </Text>
+        <Box flexDirection="column" width={terminalWidth} height={terminalHeight}>
+            <Header isPaused={isPaused} />
+            
+            {/* Top Row: System + Network Metrics */}
+            <Box>
+                <MetricsPanel 
+                    metrics={metrics} 
+                    isFocused={selectedPanel === 0}
+                />
+                <NetworkPanel metrics={networkMetrics} />
             </Box>
 
-            <Box flexDirection="column" marginBottom={1}>
-                <Text bold underline>
-                    Main Menu:
-                </Text>
-                <Newline />
-                {options.map((option, index) => (
-                    <Box key={option.value}>
-                        <Text color={index === selectedOption ? 'green' : 'white'}>
-                            {index === selectedOption ? '▶ ' : '  '}
-                            {option.label}
-                        </Text>
-                    </Box>
-                ))}
+            {/* Middle Row: Process Manager + Stats */}
+            <Box flexGrow={1}>
+                <ProcessManager 
+                    processes={processes}
+                    isFocused={selectedPanel === 1}
+                    selectedIndex={selectedProcessIndex}
+                    statusMessage={statusMessage}
+                    maxVisible={maxVisibleProcesses}
+                />
+                <StatsPanel 
+                    stats={stats} 
+                    isFocused={selectedPanel === 2}
+                />
             </Box>
 
-            <Box borderStyle="round" borderColor="yellow" padding={1} flexDirection="column" marginBottom={1}>
-                {options[selectedOption].value === 'about' && (
-                    <Box flexDirection="column">
-                        <Text bold color="yellow">
-                            About Ink
-                        </Text>
-                        <Newline />
-                        <Text>Ink is a React custom reconciler for building CLI applications.</Text>
-                        <Text>Instead of rendering to the DOM, it renders to the terminal using</Text>
-                        <Text>ANSI escape codes and terminal control sequences.</Text>
-                        <Newline />
-                        <Text dimColor>📦 Components: &lt;Box&gt;, &lt;Text&gt;, &lt;Newline&gt;</Text>
-                        <Text dimColor>🎯 Hooks: useInput, useApp, useStdout, useStdin</Text>
-                        <Text dimColor>🎨 Styles: Flexbox layouts, colors, borders</Text>
-                    </Box>
-                )}
-
-                {options[selectedOption].value === 'counter' && (
-                    <Box flexDirection="column">
-                        <Text bold color="green">
-                            Counter Demo (Auto-incrementing)
-                        </Text>
-                        <Newline />
-                        <Box>
-                            <Text>Current count: </Text>
-                            <Text bold color="magenta">
-                                {counter}
-                            </Text>
-                        </Box>
-                        <Newline />
-                        <Text dimColor>Press Enter to increment manually</Text>
-                        <Text dimColor>Counter auto-increments every second while selected</Text>
-                    </Box>
-                )}
-
-                {options[selectedOption].value === 'technical' && (
-                    <Box flexDirection="column">
-                        <Text bold color="blue">
-                            Technical Details
-                        </Text>
-                        <Newline />
-                        <Text bold>Custom Reconciler Implementation:</Text>
-                        <Text>• Ink implements react-reconciler to target the terminal</Text>
-                        <Text>• React elements map to terminal primitives (text, boxes)</Text>
-                        <Text>• Uses Yoga for flexbox layout calculations</Text>
-                        <Text>• Renders to stdout using ANSI escape codes</Text>
-                        <Newline />
-                        <Text bold>Reconciliation Process:</Text>
-                        <Text>1. React tree → Ink reconciler</Text>
-                        <Text>2. Ink reconciler → Yoga layout engine</Text>
-                        <Text>3. Yoga → Calculate positions/sizes</Text>
-                        <Text>4. Render → Terminal output with ANSI codes</Text>
-                        <Newline />
-                        <Text bold>Benefits:</Text>
-                        <Text>✓ Declarative CLI interfaces</Text>
-                        <Text>✓ React component reusability</Text>
-                        <Text>✓ Stateful terminal UIs</Text>
-                        <Text>✓ Hooks and lifecycle methods</Text>
-                    </Box>
-                )}
-
-                {options[selectedOption].value === 'exit' && (
-                    <Box>
-                        <Text color="red">Press Enter to exit</Text>
-                    </Box>
-                )}
-            </Box>
-
-            <Box borderStyle="round" borderColor="gray" padding={1}>
-                <Text dimColor>Controls: ↑/↓ to navigate | Enter to select | Q to quit</Text>
-            </Box>
-
-            <Box marginTop={1}>
-                <Text dimColor italic>
-                    This entire interface is built with React components!
-                </Text>
-            </Box>
+            <Footer />
         </Box>
     );
 };
