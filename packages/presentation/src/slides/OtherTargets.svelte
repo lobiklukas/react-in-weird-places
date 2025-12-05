@@ -113,7 +113,7 @@
 					<p class="text-[56px] font-bold text-teal-400">If you can describe it as a tree...</p>
 				</Step>
 				<Step>
-					<p class="mt-8 text-[64px] font-bold">You can probably use React for it</p>
+					<p class="mt-8 text-[64px] font-bold">There is probably a React package for it</p>
 				</Step>
 			</div>
 		</div>

@@ -14,29 +14,39 @@
 	</Layout>
 </Slide>
 
+<!-- The Pattern -->
+<Slide animateRestart>
+	<Layout>
+		<div class="flex h-full items-center justify-center"></div>
+	</Layout>
+</Slide>
+
 <Slide animate>
 	<Layout>
-		<div class="flex h-full flex-col items-center justify-center gap-8 px-32">
-			<Step>
-				<div class="rounded-lg bg-gray-800 p-8 text-[36px]">
-					<span class="text-[48px]">1️⃣</span> React is not just for web browsers
+		<div class="flex h-full items-center justify-center">
+			<div class="text-center max-w-[1000px]">
+				<div class="space-y-6 text-left text-[40px]">
+					<div class="w-full max-w-[1000px] text-[64px] leading-[120%]">
+						The Universal Pattern
+					</div>
+					<Step>
+						<p>✅ Components & Hooks (you know this)</p>
+					</Step>
+					<Step>
+						<p class="ml-12 text-gray-400">↓</p>
+						<p>✅ Reconciler (handles the diffing)</p>
+					</Step>
+					<Step>
+						<p class="ml-12 text-gray-400">↓</p>
+						<p>🔀 Renderer (swap this part!)</p>
+					</Step>
+					<Step>
+						<p class="mt-12 text-center text-[48px] text-teal-400">
+							DOM → PDF → Canvas → CLI → Your idea here
+						</p>
+					</Step>
 				</div>
-			</Step>
-			<Step>
-				<div class="rounded-lg bg-gray-800 p-8 text-[36px]">
-					<span class="text-[48px]">2️⃣</span> The reconciler makes anything possible
-				</div>
-			</Step>
-			<Step>
-				<div class="rounded-lg bg-gray-800 p-8 text-[36px]">
-					<span class="text-[48px]">3️⃣</span> Major companies use React everywhere
-				</div>
-			</Step>
-			<Step>
-				<div class="rounded-lg bg-gray-800 p-8 text-[36px]">
-					<span class="text-[48px]">4️⃣</span> You can build your own renderer!
-				</div>
-			</Step>
+			</div>
 		</div>
 	</Layout>
 </Slide>
@@ -45,13 +55,30 @@
 <Slide animateRestart>
 	<Layout>
 		<div class="flex h-full flex-col items-center justify-center gap-8">
-			<p class="text-[64px] font-bold">Resources</p>
-			<div class="text-[32px] text-left space-y-4">
-				<Step><p>📚 React Reconciler: github.com/facebook/react/tree/main/packages/react-reconciler</p></Step>
-				<Step><p>⌨️ Ink: github.com/vadimdemedes/ink</p></Step>
-				<Step><p>🎥 Remotion: remotion.dev</p></Step>
-				<Step><p>🎮 React Three Fiber: docs.pmnd.rs/react-three-fiber</p></Step>
-				<Step><p>📖 Custom Renderers Guide: agent-hunt.medium.com/hello-world-custom-react-renderer</p></Step>
+			<p class="text-[64px] font-bold">Start Here</p>
+			<div class="text-[32px] space-y-6 max-w-[1100px]">
+				<div class="rounded-lg bg-gray-800 p-6">
+					<p class="text-teal-400 mb-2">🚀 Easiest to Start:</p>
+					<p>Ink (CLI) → github.com/vadimdemedes/ink</p>
+				</div>
+
+				<div class="rounded-lg bg-gray-800 p-6">
+					<p class="text-purple-400 mb-2">🎮 Most Fun:</p>
+					<p>React Three Fiber → docs.pmnd.rs/react-three-fiber</p>
+				</div>
+
+				<div class="rounded-lg bg-gray-800 p-6">
+					<p class="text-orange-400 mb-2">🎥 Videos & More:</p>
+					<p>Remotion → remotion.dev</p>
+				</div>
+
+				<div class="rounded-lg bg-gray-800 p-6">
+					<p class="text-blue-400 mb-2">📚 Build Your Own:</p>
+					<p>
+						Custom Renderer Tutorial →
+						agent-hunt.medium.com/hello-world-custom-react-renderer
+					</p>
+				</div>
 			</div>
 		</div>
 	</Layout>
@@ -64,9 +91,6 @@
 			<div class="text-center">
 				<h1 class="text-[100px] font-bold">Thank You!</h1>
 				<p class="mt-8 text-[48px] text-gray-400">Questions?</p>
-				<Step>
-					<p class="mt-12 text-[36px]">🚀 Now go build something weird with React!</p>
-				</Step>
 			</div>
 		</div>
 	</Layout>
